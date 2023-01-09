@@ -15,12 +15,10 @@ const UserKey = process.argv.slice(2).toString();
 const publicKey = new PublicKey(UserKey).toString();
 
 
-// Connect to the Devnet
-const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
-
+// Connection to the Devnet
 console.log("Public Key of the generated keypair", publicKey);
 
-// Get the wallet balance from a given private key
+// Get the wallet balance from the user private key
 const getWalletBalance = async () => {
     try {
         // Connect to the Devnet
